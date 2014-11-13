@@ -8,7 +8,9 @@ var options = {
 
 var nid = 0;
 var count = 0;
-var jsCode = 'document.getElementById("notificationsCountValue").innerText';
+var jsCode = 'Number(document.getElementById("notificationsCountValue").innerText)'
+	+ '+Number(document.getElementById("requestsCountValue").innerText)'
+	+ '+Number(document.getElementById("mercurymessagesCountValue").innerText)';
 
 
 function checkCount() {
